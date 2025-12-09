@@ -2,7 +2,8 @@ import React from "react";
 import bgImage from "../../assets/bg/homeBgMain.png";
 import sl1 from "../../assets/logos/sponsors/sl1.png"
 
-
+import FAQ from '../../components/faq/FAQ';
+import Testimonials from '../../components/testimonials/Testimonials';
 
 export default function Home() {
   const stats = [
@@ -99,7 +100,8 @@ export default function Home() {
         
       </section>
 
-
+      <Testimonials />
+      <FAQ />
      
     </div>
   );
