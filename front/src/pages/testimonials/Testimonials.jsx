@@ -46,7 +46,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="relative min-h-screen py-12 sm:py-16 px-4 sm:px-6 lg:px-8 pb-0 overflow-visible"
+      className="relative min-h-screen py-12 sm:py-16 px-4 sm:px-6 lg:px-8 pb-0 overflow-hidden"
       style={{
         backgroundImage: `url(${testimonialsFaqBg})`,
         backgroundPosition: "center top",
@@ -56,9 +56,9 @@ const Testimonials = () => {
       }}
     >
       {/* Decorative stars */}
-      <div className="absolute top-10 left-20 w-1 h-1 bg-white rounded-full animate-pulse"></div>
-      <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse delay-100"></div>
-      <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse delay-200"></div>
+      <div className="absolute top-10 left-20 w-1 h-1 bg-white rounded-full animate-pulse" />
+      <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-white rounded-full animate-pulse delay-100" />
+      <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse delay-200" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -72,14 +72,15 @@ const Testimonials = () => {
         </div>
 
         {/* HORIZONTAL SLIDER */}
-        <div className="relative overflow-visible py-6 sm:py-8 md:py-10">
-          <div className="flex gap-6 sm:gap-8 md:gap-10 animate-testimonials-slide overflow-visible">
+        <div className="relative overflow-hidden py-6 sm:py-8 md:py-10">
+          <div className="flex gap-6 sm:gap-8 md:gap-10 animate-testimonials-slide">
             {sliderList.map((testimonial, index) => (
               <div
                 key={index}
                 className="
                   relative
-                  min-w-[280px] sm:min-w-[300px] md:min-w-[320px] max-w-sm
+                  min-w-[80vw] sm:min-w-[300px] md:min-w-[320px]
+                  max-w-xs sm:max-w-sm
                   rounded-3xl
                   p-6 sm:p-8 md:p-10
                   bg-[#061228]/90
@@ -87,10 +88,11 @@ const Testimonials = () => {
                   border border-[#1e2d4a]
                   shadow-[0_0_40px_rgba(0,150,255,0.25)]
                   transition-all duration-300
-                  hover:scale-110 sm:hover:scale-125 
-                  hover:-translate-y-4 sm:hover:-translate-y-6
-                  hover:shadow-[0_0_60px_rgba(0,150,255,0.5)] sm:hover:shadow-[0_0_80px_rgba(0,150,255,0.6)]
-                  hover:z-50
+                  md:hover:scale-110 lg:hover:scale-125
+                  md:hover:-translate-y-4 lg:hover:-translate-y-6
+                  md:hover:shadow-[0_0_60px_rgba(0,150,255,0.5)]
+                  lg:hover:shadow-[0_0_80px_rgba(0,150,255,0.6)]
+                  md:hover:z-50
                   cursor-pointer
                   will-change-transform
                 "
