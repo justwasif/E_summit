@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../assets/bg/homeBgEvents.png";
+import bgImage from "../../assets/bg/speakers_sponsors_2.png";
 
 export default function SponsorsPage() {
   const sponsors = [
