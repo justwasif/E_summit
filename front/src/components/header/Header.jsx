@@ -11,9 +11,12 @@ export default function Header() {
       {/* very subtle top gradient over the hero */}
       <div className="bg-gradient-to-b from-black/70 via-black/30 to-transparent backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex h-16 items-center">
-             <img src={summitLogo} alt="E-Summit Logo" className="h-9 w-9 object-contain"/>
+        
+             <div className="flex h-16 items-center">
+                <img src={summitLogo} alt="E-Summit Logo" className="h-9 w-9 object-contain"/>
             <div className="flex items-center gap-3">
+          
+
               
               <span className="text-white font-semibold tracking-wide text-lg">
                 E-SUMMIT
@@ -22,7 +25,7 @@ export default function Header() {
 
             {/* CENTER: nav items */}
             <nav className="flex-1 flex justify-center">
-              <ul className="flex gap-8 text-[11px] uppercase tracking-[0.25em] text-slate-200">
+              <ul className="flex gap-8 text-[15px] uppercase tracking-[0.25em] text-slate-200">
                 {navItems.map((item) => (
                   <li key={item}>
                     <button

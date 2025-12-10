@@ -11,7 +11,6 @@ export default function Speakers() {
     { name: "Aman Gupta", role: "Co-Founder • boAt", speakerImg },
   ];
 
-  // Duplicate list for smooth infinite sliding
   const sliderList = [...speakers, ...speakers];
 
   return (
@@ -40,7 +39,12 @@ export default function Speakers() {
             {sliderList.map((speaker, index) => (
               <div
                 key={index}
-                className="rounded-3xl p-1 bg-white/5 min-w-[300px]"
+                className="
+                  rounded-3xl p-1 bg-white/5 min-w-[300px]
+                  transition-all duration-300
+                  hover:scale-105 hover:shadow-[0_0_25px_rgba(0,140,255,0.6)]
+                  active:scale-105 active:shadow-[0_0_25px_rgba(0,140,255,0.6)]
+                "
               >
                 <div className="rounded-3xl overflow-hidden bg-white/10 backdrop-blur">
                   <img
@@ -61,7 +65,6 @@ export default function Speakers() {
         </div>
       </div>
 
-      {/* Animation CSS */}
       <style>{`
         @keyframes slide {
           0% { transform: translateX(0); }
