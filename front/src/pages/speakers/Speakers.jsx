@@ -22,7 +22,7 @@ export default function Speakers() {
       }}
     >
       {/* overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 "></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="mb-4">

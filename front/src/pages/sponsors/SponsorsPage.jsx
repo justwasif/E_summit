@@ -27,7 +27,7 @@ export default function SponsorsPage() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 "></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-start justify-between gap-16">
         {/* LEFT SIDE */}

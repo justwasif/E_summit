@@ -23,7 +23,7 @@ export default function Events() {
       }}
     >
       {/* dark overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 " />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-16 pb-20">
         {/* top row */}

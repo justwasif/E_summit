@@ -39,10 +39,10 @@ export default function Header() {
 
             {/* RIGHT: Tickets / Register */}
             <div className="flex items-center gap-3">
-              <button className="px-4 py-1.5 rounded-full border border-sky-300/70 bg-black/30 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-100 hover:bg-sky-300/10 transition">
+              <button className="px-4 py-1.5  border-sky-300/70 bg-black/30 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-100 hover:bg-sky-300/10 transition">
                 Tickets
               </button>
-              <button className="px-4 py-1.5 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-blue-500/40 hover:brightness-110 transition">
+              <button className="px-4 py-1.5  bg-gradient-to-r from-sky-400 to-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-blue-500/40 hover:brightness-110 transition">
                 Register
               </button>
             </div>
