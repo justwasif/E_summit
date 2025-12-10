@@ -5,6 +5,8 @@ import Sponsors from '../pages/sponsors/Sponsors';
 import Events from '../pages/events/Events';
 import Speakers from '../pages/speakers/Speakers';
 import SponsorsPage from '../pages/sponsors/SponsorsPage';
+import Testimonials from "../pages/testimonials/Testimonials.jsx";
+import FAQ from "../pages/faq/FAQ.jsx";
 
 const Layout = () => {
     return (
@@ -17,6 +19,8 @@ const Layout = () => {
             <Events/>
             <Speakers/>
             <SponsorsPage/>
+            <Testimonials/>
+            <FAQ/>
             <Footer />
 
         </div>
