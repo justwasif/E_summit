@@ -4,10 +4,10 @@ import backgroundImage from '../../assets/bg/homeBgMain.png'
 export default function Home() {
   
   return (
-    <div className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden py-48">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       ></div>
       
@@ -44,88 +44,76 @@ export default function Home() {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all duration-300 tracking-wider uppercase">
+          <button className="px-8 py-3 border rounded-xl bg-blue-950/70 border-white hover:bg-white hover:text-black transition-all duration-300 tracking-wider uppercase">
             Tickets
           </button>
-          <button className="px-4 py-1.5  bg-gradient-to-r from-sky-400 to-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-blue-500/40 hover:brightness-110 transition">
+          <button className="px-4 py-3 rounded-xl bg-[linear-gradient(90deg,#00C0FF_0%,#5558FF_100%)] text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-blue-500/40 hover:brightness-110 transition">
             Register
           </button>
         </div>
-        
-        {/* Participants stats with underlines - decreasing sizes */}
-        <div className="relative mt-20 max-w-6xl mx-auto">
-          {/* Top row - Largest */}
-          <div className="flex justify-between items-start mb-10">
-            <div className="text-left">
-              <div className="flex items-center gap-4 mb-1">
-                <p className="text-5xl md:text-6xl font-bold">15K+</p>
-                <p className="text-base text-gray-400">Participants Every Year</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-            <div className="text-right">
-              <div className="flex items-center gap-4 mb-1">
-                <p className="text-base text-gray-400">Participants Every Year</p>
-                <p className="text-5xl md:text-6xl font-bold">15K+</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-          </div>
-          
-          {/* Second row */}
-          <div className="flex justify-between items-start mb-10">
-            <div className="text-left">
-              <div className="flex items-center gap-3 mb-1">
-                <p className="text-4xl md:text-5xl font-bold">15K+</p>
-                <p className="text-sm text-gray-400">Participants Every</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-            <div className="text-right">
-              <div className="flex items-center gap-3 mb-1">
-                <p className="text-sm text-gray-400">Participants Every</p>
-                <p className="text-4xl md:text-5xl font-bold">15K+</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-          </div>
-          
-          {/* Third row */}
-          <div className="flex justify-between items-start mb-10">
-            <div className="text-left">
-              <div className="flex items-center gap-3 mb-1">
-                <p className="text-3xl md:text-4xl font-bold">15K+</p>
-                <p className="text-xs text-gray-400">Participants</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-            <div className="text-right">
-              <div className="flex items-center gap-3 mb-1">
-                <p className="text-xs text-gray-400">Participants</p>
-                <p className="text-3xl md:text-4xl font-bold">15K+</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-          </div>
-          
-          {/* Bottom row - Smallest */}
-          <div className="flex justify-between items-start">
-            <div className="text-left">
-              <div className="flex items-center gap-2 mb-1">
-                <p className="text-2xl md:text-3xl font-bold">15K+</p>
-                <p className="text-xs text-gray-400">Participants</p>
-              </div>
-              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-           <div className="w-full text-right">
-              <div className="flex justify-end items-center gap-2 mb-1">
-                <p className="text-xs text-gray-400">Participants</p>
-                <p className="text-2xl md:text-3xl font-bold">15K+</p>
-              </div>
+      </div>
 
-            <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
+      {/* Participants stats with underlines - stacked vertically */}
+      <div className="relative w-full px-4 py-20">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* Row 1 - Largest */}
+          <div className="w-full">
+            <div className="flex justify-between items-center mb-2 px-8 md:px-16">
+              <div className="flex items-center gap-6">
+                <p className="text-5xl md:text-6xl font-bold">15K+</p>
+                <p className="text-base md:text-lg text-gray-300">Participants Every Year</p>
+              </div>
+              <div className="flex items-center gap-6">
+                <p className="text-base md:text-lg text-gray-300">Participants Every Year</p>
+                <p className="text-5xl md:text-6xl font-bold">15K+</p>
+              </div>
+            </div>
+            <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-400"></div>
           </div>
 
+          {/* Row 2 */}
+          <div className="w-full">
+            <div className="flex justify-between items-center mb-2 px-16 md:px-32">
+              <div className="flex items-center gap-6">
+                <p className="text-4xl md:text-5xl font-bold">15K+</p>
+                <p className="text-sm md:text-base text-gray-300">Participants Every</p>
+              </div>
+              <div className="flex items-center gap-6">
+                <p className="text-sm md:text-base text-gray-300">Participants Every</p>
+                <p className="text-4xl md:text-5xl font-bold">15K+</p>
+              </div>
+            </div>
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+          </div>
+
+          {/* Row 3 */}
+          <div className="w-full">
+            <div className="flex justify-between items-center mb-2 px-32 md:px-48">
+              <div className="flex items-center gap-4">
+                <p className="text-3xl md:text-4xl font-bold">15K+</p>
+                <p className="text-xs md:text-sm text-gray-300">Participants</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <p className="text-xs md:text-sm text-gray-300">Participants</p>
+                <p className="text-3xl md:text-4xl font-bold">15K+</p>
+              </div>
+            </div>
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+          </div>
+
+          {/* Row 4 - Smallest */}
+          <div className="w-full">
+            <div className="flex justify-between items-center mb-2">
+              <div className="flex items-center gap-3">
+                <p className="text-2xl md:text-3xl font-bold">15K+</p>
+                <p className="text-xs text-gray-300">Participants</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <p className="text-xs text-gray-300">Participants</p>
+                <p className="text-2xl md:text-3xl font-bold">15K+</p>
+              </div>
+            </div>
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
           </div>
         </div>
       </div>
