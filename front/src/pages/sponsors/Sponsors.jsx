@@ -2,10 +2,10 @@
 import React from "react";
 
 // IMPORT INDIVIDUAL LOGOS
-import flexLogo from "../../assets/logos/sponsors/sl1.png";
-import deloitteLogo from "../../assets/logos/sponsors/sl2.png";
-import walmartLogo from "../../assets/logos/sponsors/sl3.png";
-import googleLogo from "../../assets/logos/sponsors/sl4.png";
+import flexLogo from "../../assets/logos/sponsors/sl1.svg";
+import deloitteLogo from "../../assets/logos/sponsors/sl2.svg";
+import walmartLogo from "../../assets/logos/sponsors/sl3.svg";
+import googleLogo from "../../assets/logos/sponsors/sl4.svg";
 
 export default function Sponsors() {
   const sponsorLogos = [
