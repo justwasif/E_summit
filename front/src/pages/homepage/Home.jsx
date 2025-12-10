@@ -117,13 +117,15 @@ export default function Home() {
               </div>
               <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
-            <div className="text-right">
-              <div className="flex items-center gap-2 mb-1">
+           <div className="w-full text-right">
+              <div className="flex justify-end items-center gap-2 mb-1">
                 <p className="text-xs text-gray-400">Participants</p>
                 <p className="text-2xl md:text-3xl font-bold">15K+</p>
               </div>
-              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
+
+            <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
+          </div>
+
           </div>
         </div>
       </div>
