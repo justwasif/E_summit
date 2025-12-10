@@ -52,9 +52,9 @@ export default function Home() {
           </button>
         </div>
         
-        {/* Participants stats with underlines - decreasing sizes */}
+    
         <div className="relative mt-20 max-w-6xl mx-auto">
-          {/* Top row - Largest */}
+        
           <div className="flex justify-between items-start mb-10">
             <div className="text-left">
               <div className="flex items-center gap-4 mb-1">
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Second row */}
+
           <div className="flex justify-between items-start mb-10">
             <div className="text-left">
               <div className="flex items-center gap-3 mb-1">
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Third row */}
+    
           <div className="flex justify-between items-start mb-10">
             <div className="text-left">
               <div className="flex items-center gap-3 mb-1">
@@ -107,8 +107,7 @@ export default function Home() {
               <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
           </div>
-          
-          {/* Bottom row - Smallest */}
+        
           <div className="flex justify-between items-start">
             <div className="text-left">
               <div className="flex items-center gap-2 mb-1">
