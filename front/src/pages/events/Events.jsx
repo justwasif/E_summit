@@ -1,7 +1,7 @@
 // src/components/Events.jsx
 import React from "react";
 
-import eventsBg from "../../assets/bg/homeBgEvents.png";
+import eventsBg from '../../assets/bg/homeBgEvents.png';
 
 export default function Events() {
   const events = []; 

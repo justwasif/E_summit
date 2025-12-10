@@ -44,10 +44,10 @@ export default function Home() {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button className="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all duration-300 tracking-wider uppercase">
+          <button className="px-4 py-1.5 rounded-full border-white hover:bg-white hover:text-black transition-all duration-300 tracking-wider uppercase">
             Tickets
           </button>
-          <button className="px-8 py-3 bg-cyan-400 hover:bg-cyan-500 text-black font-medium transition-all duration-300 tracking-wider uppercase">
+          <button className="px-4 py-1.5 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-blue-500/40 hover:brightness-110 transition">
             Register
           </button>
         </div>

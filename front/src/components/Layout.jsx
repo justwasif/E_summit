@@ -3,6 +3,7 @@ import Header from './header/Header';
 import Footer from './footer/Footer';
 import Sponsors from '../pages/sponsors/Sponsors';
 import Events from '../pages/events/Events';
+import Speakers from '../pages/speakers/Speakers';
 
 const Layout = () => {
     return (
@@ -10,10 +11,12 @@ const Layout = () => {
             <Header />
             <main className="flex-grow">
                 <Outlet />
-            </main>
-            <Events/>
+            </main> 
             <Sponsors/>
+            <Events/>
+            <Speakers/>
             <Footer />
+
         </div>
     );
 };
