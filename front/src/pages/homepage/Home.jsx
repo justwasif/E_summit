@@ -1,5 +1,10 @@
 import React from "react";
 import backgroundImage from '../../assets/bg/homeBgMain.png'
+import sl1 from "../../assets/logos/sponsors/sl1.png"
+
+import FAQ from '../../components/faq/FAQ';
+import Testimonials from '../../components/testimonials/Testimonials';
+
 export default function Home() {
   
   
@@ -125,7 +130,34 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+
+    
+        
+      </section>
+
+      <Testimonials />
+      <FAQ />
+
+      function Stat({ label, align = "left" }) {
+        const isLeft = align === "left";
+
+        return (
+          <div
+            className={`flex items-center gap-3 ${
+              isLeft ? "" : "flex-row-reverse"
+            }`}
+          >
+            <div
+              className={`h-[1px] w-20 md:w-28 bg-gradient-to-${
+                isLeft ? "r" : "l"
+              } from-cyan-400 via-cyan-300 to-transparent`}
+            />
+            <div className={`${isLeft ? "text-left" : "text-right"}`}>
+              <p className="text-xl md:text-2xl font-bold text-white">15K+</p>
+              <p className="text-[9px] md:text-[10px] text-slate-300 tracking-wider uppercase whitespace-nowrap">
+                {label}
+              </p>
+            </div>
     </div>
   );
 }
