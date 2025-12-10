@@ -33,18 +33,24 @@ export default function Speakers() {
           Our Recent <span className="text-blue-400">Past Guests</span>
         </h2>
 
-        {/* SLIDER */}
-        <div className="overflow-hidden">
-          <div className="flex gap-6 animate-slide">
+        {/* SLIDER WRAPPER */}
+        <div className="relative overflow-visible">
+          {/* SLIDER */}
+          <div className="flex gap-6 animate-slide overflow-visible">
             {sliderList.map((speaker, index) => (
               <div
                 key={index}
-                className="
+                className={`
+                  relative
                   rounded-3xl p-1 bg-white/5 min-w-[300px]
-                  transition-all duration-300
-                  hover:scale-105 hover:shadow-[0_0_25px_rgba(0,140,255,0.6)]
-                  active:scale-105 active:shadow-[0_0_25px_rgba(0,140,255,0.6)]
-                "
+                  transition-transform transition-shadow duration-300
+                  hover:scale-125 hover:-translate-y-6
+                  hover:shadow-[0_0_80px_rgba(0,140,255,0.8)]
+                  hover:z-50
+                  active:scale-125 active:-translate-y-6
+                  cursor-pointer
+                  will-change-transform
+                `}
               >
                 <div className="rounded-3xl overflow-hidden bg-white/10 backdrop-blur">
                   <img
@@ -65,6 +71,7 @@ export default function Speakers() {
         </div>
       </div>
 
+      {/* SLIDE ANIMATION */}
       <style>{`
         @keyframes slide {
           0% { transform: translateX(0); }
