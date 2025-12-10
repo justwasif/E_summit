@@ -1,9 +1,6 @@
 import React from "react";
 import backgroundImage from "../../assets/bg/homeBgMain.png";
-import sl1 from "../../assets/logos/sponsors/sl1.png";
 
-import FAQ from "../../components/faq/FAQ";
-import Testimonials from "../../components/testimonials/Testimonials";
 
 function Stat({ value = "15K+", label, align = "left", valueClass = "" }) {
   const isLeft = align === "left";
