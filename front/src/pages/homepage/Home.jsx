@@ -1,6 +1,7 @@
 import React from "react";
 import backgroundImage from "../../assets/bg/homeBgMain.png";
 
+
 function Stat({ value = "15K+", label, align = "left", valueClass = "" }) {
   const isLeft = align === "left";
 
