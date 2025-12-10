@@ -10,19 +10,32 @@ import FAQ from "../pages/faq/FAQ.jsx";
 
 const Layout = () => {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen scroll-smooth">
             <Header />
             <main className="flex-grow">
-                <Outlet />
-            </main> 
-            <Sponsors/>
-            <Events/>
-            <Speakers/>
-            <SponsorsPage/>
-            <Testimonials/>
-            <FAQ/>
+                <div id="home" className="snap-start">
+                    <Outlet />
+                </div>
+                <div id="sponsors-bar" className="snap-start">
+                    <Sponsors/>
+                </div>
+                <div id="events" className="snap-start">
+                    <Events/>
+                </div>
+                <div id="speakers" className="snap-start">
+                    <Speakers/>
+                </div>
+                <div id="partners" className="snap-start">
+                    <SponsorsPage/>
+                </div>
+                <div id="testimonials" className="snap-start">
+                    <Testimonials/>
+                </div>
+                <div id="faq" className="snap-start">
+                    <FAQ/>
+                </div>
+            </main>
             <Footer />
-
         </div>
     );
 };

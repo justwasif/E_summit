@@ -31,43 +31,42 @@ export default function SponsorsPage() {
   ];
 
   return (
-      <section
-          className="relative w-full min-h-screen text-white py-24"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-      >
-        {/* dark overlay if needed later */}
-        <div className="absolute inset-0" />
+    <section
+      className="relative w-full min-h-screen text-white py-16 sm:py-20 md:py-24"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-start justify-between gap-16">
-          {/* LEFT SIDE */}
-          <div className="max-w-xl">
-          <span className="inline-block px-4 py-1 mb-5 border border-blue-400 rounded-full text-xs tracking-[0.2em] uppercase">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start justify-between gap-12 sm:gap-16">
+        {/* LEFT SIDE */}
+        <div className="max-w-xl w-full lg:w-auto">
+          <span className="inline-block px-3 sm:px-4 py-1 mb-4 sm:mb-5 border border-blue-400 rounded-full text-[10px] sm:text-xs tracking-[0.2em] uppercase">
             # Sponsors
           </span>
 
-            <h2 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
-              We build <span className="text-blue-400">Trust</span> not by
-              <br />
-              words but by <span className="text-blue-400">Action</span>
-            </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight mb-5 sm:mb-6">
+            We build <span className="text-blue-400">Trust</span> not by
+            <br className="hidden sm:block" />
+            words but by <span className="text-blue-400">Action</span>
+          </h2>
 
-            <p className="text-gray-300 leading-relaxed text-sm md:text-base">
-              Manga (Japanese: 漫画; IPA: [maŋga] ⓘ[a]) are comics or graphic novels originating from Japan.[1] Most manga conform to a style developed in Japan in the late 19th century,[2] and the form has a long history in earlier Japanese art.[3] The term manga is used in Japan to refer to both comics and cartooning. Outside of Japan, the word is typically used to refer to comics originally published in Japan.
+          <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+            Manga (Japanese: 漫画; IPA: [maŋga] ⓘ[a]) are comics or graphic novels originating from Japan.[1] Most manga conform to a style developed in Japan in the late 19th century,[2] and the form has a long history in earlier Japanese art.[3] The term manga is used in Japan to refer to both comics and cartooning. Outside of Japan, the word is typically used to refer to comics originally published in Japan.
 
-              In Japan, people of all ages and walks of life read manga. The medium includes works in a broad range of genres: action, adventure, business and commerce, comedy, detective, drama, historical, horror, mystery, romance, science fiction and fantasy, erotica (hentai and ecchi), sports and games, and suspense, among others.[4][5] Many manga are translated into other languages.[6][7]
-            </p>
-          </div>
+            In Japan, people of all ages and walks of life read manga. The medium includes works in a broad range of genres: action, adventure, business and commerce, comedy, detective, drama, historical, horror, mystery, romance, science fiction and fantasy, erotica (hentai and ecchi), sports and games, and suspense, among others.[4][5] Many manga are translated into other languages.[6][7]
+          </p>
+        </div>
 
-          {/* RIGHT SIDE — floating sponsor blocks */}
-          <div className="relative w-full max-w-xl h-[260px] md:h-[320px] lg:h-[340px]">
-            {sponsorPills.map((pill, idx) => (
-                <div
-                    key={idx}
-                    className={`
+        {/* RIGHT SIDE — floating sponsor blocks */}
+        <div className="relative w-full max-w-xl h-[260px] md:h-[320px] lg:h-[340px]">
+          {sponsorPills.map((pill, idx) => (
+            <div
+              key={idx}
+              className={`
                 absolute 
                 bg-[linear-gradient(90deg,#00C0FF_0%,#5558FF_100%)]
                 shadow-lg opacity-90 
@@ -76,16 +75,16 @@ export default function SponsorsPage() {
                 overflow-hidden rounded-lg
                 ${pill.className}
               `}
-                >
-                  <img
-                      src={pill.img}
-                      alt="Sponsor Logo"
-                      className="w-full h-full object-contain p-1"
-                  />
-                </div>
-            ))}
-          </div>
+            >
+              <img
+                src={pill.img}
+                alt="Sponsor Logo"
+                className="w-full h-full object-contain p-1"
+              />
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
