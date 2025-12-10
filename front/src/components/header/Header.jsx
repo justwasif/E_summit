@@ -1,5 +1,6 @@
 // src/components/header/Header.jsx
 import React from "react";
+import { Link,NavLink } from "react-router-dom";
 import summitLogo from '../../assets/logos/summitLogo.svg';
 
 const navItems = ["Events", "Speakers", "Workshops", "Partners", "Sponsors"];

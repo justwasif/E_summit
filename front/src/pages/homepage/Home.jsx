@@ -1,97 +1,132 @@
 import React from "react";
-import bgImage from "../../assets/bg/homeBgMain.png";
+import backgroundImage from '../../assets/bg/homeBgMain.png'
 import sl1 from "../../assets/logos/sponsors/sl1.png"
 
 import FAQ from '../../components/faq/FAQ';
 import Testimonials from '../../components/testimonials/Testimonials';
 
 export default function Home() {
-  const stats = [
-    "Participants Every Year",
-    "Participants Every Year",
-    "Participants",
-    "Participants",
-    "Participants",
-    "Participants",
-  ];
-
+  
+  
   return (
-    <div className="w-full bg-black text-white">
-      {/* HERO POSTER - FULL SCREEN */}
-      <section className="relative w-full h-screen">
-        {/* Background image that fills entire screen */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            // Replace with: backgroundImage: `url(${bgImage})`
-          }}
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90" />
-
-      {/* CONTENT WRAPPER */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 pt-28 pb-24 flex flex-col items-center text-center gap-16">
-        {/* TOP TEXT BLOCK */}
-        <div className="space-y-6">
-          {/* small tagline */}
-          <p className="text-xs md:text-sm tracking-[0.35em] uppercase text-slate-200">
-            Breaking Systems. Rewriting Innovation
-          </p>
-
-          {/* big title */}
-          <div className="space-y-2 leading-tight">
-            <p className="text-3xl md:text-5xl lg:text-6xl font-light tracking-[0.4em] uppercase">
-              Transcending
-            </p>
-            <p className="text-sm md:text-base tracking-[0.4em] uppercase text-sky-200">
-              the
-            </p>
-            <p className="text-3xl md:text-5xl lg:text-6xl font-light tracking-[0.4em] uppercase">
-              Paradigm
-            </p>
-          </div>
-
-          {/* subtitle */}
-          <p className="max-w-xl mx-auto text-xs md:text-sm text-slate-200/90">
-            India&apos;s flagship entrepreneurship summit uniting creators and
-            founders to challenge limits and build the future.
-          </p>
-
-          {/* dates */}
-          <p className="text-sm md:text-base font-semibold tracking-[0.25em] uppercase">
-            6<span className="align-super text-[0.6em]">th</span> – 8
-            <span className="align-super text-[0.6em]">th</span> February 2026
-          </p>
-
-            <div className="flex items-center justify-center gap-4 pt-6">
-              <button className="px-8 py-2.5 rounded-full border border-slate-300/50 bg-transparent backdrop-blur-sm text-[10px] font-semibold uppercase tracking-[0.25em] text-white hover:bg-white/10 transition">
-                TICKETS
-              </button>
-              <button className="px-8 py-2.5 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 text-[10px] font-semibold uppercase tracking-[0.25em] text-white shadow-lg shadow-blue-500/50 hover:brightness-110 transition">
-                REGISTER
-              </button>
+    <div className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      ></div>
+      
+      {/* Optional overlay for better text readability */}
+      <div className="absolute inset-0 bg-black opacity-30"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-4xl">
+        {/* Top tagline */}
+        <p className="text-sm md:text-base tracking-widest mb-8 uppercase text-gray-300">
+          Breaking Systems. Rewriting Innovation
+        </p>
+        
+        {/* Main title */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-widest mb-4">
+          TRANSCENDING
+        </h1>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wider mb-4">
+          THE
+        </h2>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-widest mb-12">
+          PARADIGM
+        </h1>
+        
+        {/* Description */}
+        <p className="text-sm md:text-base text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          India's flagship entrepreneurship summit uniting creators and founders to challenge limits and build the future.
+        </p>
+        
+        {/* Date */}
+        <p className="text-xl md:text-2xl font-light mb-8 tracking-wide">
+          6<sup>th</sup> - 8<sup>th</sup> February 2026
+        </p>
+        
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <button className="px-4 py-1.5 rounded-full border-white hover:bg-white hover:text-black transition-all duration-300 tracking-wider uppercase">
+            Tickets
+          </button>
+          <button className="px-4 py-1.5 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-lg shadow-blue-500/40 hover:brightness-110 transition">
+            Register
+          </button>
+        </div>
+        
+    
+        <div className="relative mt-20 max-w-6xl mx-auto">
+        
+          <div className="flex justify-between items-start mb-10">
+            <div className="text-left">
+              <div className="flex items-center gap-4 mb-1">
+                <p className="text-5xl md:text-6xl font-bold">15K+</p>
+                <p className="text-base text-gray-400">Participants Every Year</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
+            </div>
+            <div className="text-right">
+              <div className="flex items-center gap-4 mb-1">
+                <p className="text-base text-gray-400">Participants Every Year</p>
+                <p className="text-5xl md:text-6xl font-bold">15K+</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
           </div>
+          
 
-          {/* STATS SECTION - positioned in lower half */}
-          <div className="w-full max-w-6xl space-y-12 px-8 pb-32">
-            {/* Row 1 */}
-            <div className="flex justify-between items-center">
-              <Stat label={stats[0]} align="left" />
-              <Stat label={stats[1]} align="right" />
+          <div className="flex justify-between items-start mb-10">
+            <div className="text-left">
+              <div className="flex items-center gap-3 mb-1">
+                <p className="text-4xl md:text-5xl font-bold">15K+</p>
+                <p className="text-sm text-gray-400">Participants Every</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
-            
-            {/* Row 2 */}
-            <div className="flex justify-between items-center px-12">
-              <Stat label={stats[2]} align="left" />
-              <Stat label={stats[3]} align="right" />
+            <div className="text-right">
+              <div className="flex items-center gap-3 mb-1">
+                <p className="text-sm text-gray-400">Participants Every</p>
+                <p className="text-4xl md:text-5xl font-bold">15K+</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
-            
-            {/* Row 3 */}
-            <div className="flex justify-between items-center px-24">
-              <Stat label={stats[4]} align="left" />
-              <Stat label={stats[5]} align="right" />
+          </div>
+          
+    
+          <div className="flex justify-between items-start mb-10">
+            <div className="text-left">
+              <div className="flex items-center gap-3 mb-1">
+                <p className="text-3xl md:text-4xl font-bold">15K+</p>
+                <p className="text-xs text-gray-400">Participants</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
+            </div>
+            <div className="text-right">
+              <div className="flex items-center gap-3 mb-1">
+                <p className="text-xs text-gray-400">Participants</p>
+                <p className="text-3xl md:text-4xl font-bold">15K+</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
+            </div>
+          </div>
+        
+          <div className="flex justify-between items-start">
+            <div className="text-left">
+              <div className="flex items-center gap-2 mb-1">
+                <p className="text-2xl md:text-3xl font-bold">15K+</p>
+                <p className="text-xs text-gray-400">Participants</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
+            </div>
+            <div className="text-right">
+              <div className="flex items-center gap-2 mb-1">
+                <p className="text-xs text-gray-400">Participants</p>
+                <p className="text-2xl md:text-3xl font-bold">15K+</p>
+              </div>
+              <div className="h-px w-full bg-gradient-to-l from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -102,39 +137,27 @@ export default function Home() {
 
       <Testimonials />
       <FAQ />
-     
-    </div>
-  );
-}
 
-function Stat({ label, align = "left" }) {
-  const isLeft = align === "left";
+      function Stat({ label, align = "left" }) {
+        const isLeft = align === "left";
 
-  return (
-    <div
-      className={`flex items-center gap-3 ${
-        isLeft ? "" : "flex-row-reverse"
-      }`}
-    >
-      <div
-        className={`h-[1px] w-20 md:w-28 bg-gradient-to-${
-          isLeft ? "r" : "l"
-        } from-cyan-400 via-cyan-300 to-transparent`}
-      />
-      <div className={`${isLeft ? "text-left" : "text-right"}`}>
-        <p className="text-xl md:text-2xl font-bold text-white">15K+</p>
-        <p className="text-[9px] md:text-[10px] text-slate-300 tracking-wider uppercase whitespace-nowrap">
-          {label}
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function LogoText({ name }) {
-  return (
-    <div className="text-slate-700 font-semibold text-base md:text-lg">
-      {name}
+        return (
+          <div
+            className={`flex items-center gap-3 ${
+              isLeft ? "" : "flex-row-reverse"
+            }`}
+          >
+            <div
+              className={`h-[1px] w-20 md:w-28 bg-gradient-to-${
+                isLeft ? "r" : "l"
+              } from-cyan-400 via-cyan-300 to-transparent`}
+            />
+            <div className={`${isLeft ? "text-left" : "text-right"}`}>
+              <p className="text-xl md:text-2xl font-bold text-white">15K+</p>
+              <p className="text-[9px] md:text-[10px] text-slate-300 tracking-wider uppercase whitespace-nowrap">
+                {label}
+              </p>
+            </div>
     </div>
   );
 }
