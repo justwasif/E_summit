@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import Sponsors from '../pages/sponsors/Sponsors';
+import Events from '../pages/events/Events';
 
 const Layout = () => {
     return (
@@ -10,6 +11,7 @@ const Layout = () => {
             <main className="flex-grow">
                 <Outlet />
             </main>
+            <Events/>
             <Sponsors/>
             <Footer />
         </div>
