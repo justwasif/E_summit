@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import testimonialsFaqBg from '../../assets/bg/testimonials_faq.png';
 
+import c1 from "../../assets/testimonials/c1.svg";
+import c2 from "../../assets/testimonials/c2.svg";
+import c3 from "../../assets/testimonials/c3.svg";
+import c4 from "../../assets/testimonials/c4.svg";
+import c5 from "../../assets/testimonials/c5.svg";
+
+
 const Testimonials = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -9,36 +16,36 @@ const Testimonials = () => {
             name: "Aman Gupta",
             role: "CO-FOUNDER",
             company: "BOAT",
-            image: "/api/placeholder/80/80", // Replace with actual image path
+            image: c1, // Replace with actual image path
             text: "Something false has to be written here so write it in three lines. Strictly three lines, not anymore and not any less."
         },
         {
             name: "Aman Gupta",
             role: "CO-FOUNDER",
             company: "BOAT",
-            image: "/api/placeholder/80/80",
+            image: c2,
             text: "Something false has to be written here so write it in three lines. Strictly three lines, not anymore and not any less."
         },
         {
             name: "Aman Gupta",
             role: "CO-FOUNDER",
             company: "BOAT",
-            image: "/api/placeholder/80/80",
+            image: c3,
             text: "Something false has to be written here so write it in three lines. Strictly three lines, not anymore and not any less."
         },
         {
-            name: "John Doe",
-            role: "CEO",
-            company: "TechCorp",
-            image: "/api/placeholder/80/80",
-            text: "Another testimonial text that spans exactly three lines. Make sure to keep it consistent with the design requirements."
+            name: "Aman Gupta",
+            role: "CO-FOUNDER",
+            company: "BOAT",
+            image: c4,
+            text: "Something false has to be written here so write it in three lines. Strictly three lines, not anymore and not any less."
         },
         {
-            name: "Jane Smith",
-            role: "FOUNDER",
-            company: "StartupXYZ",
-            image: "/api/placeholder/80/80",
-            text: "More testimonial content here following the same three-line format. This helps maintain visual consistency across all cards."
+            name: "Aman Gupta",
+            role: "CO-FOUNDER",
+            company: "BOAT",
+            image: c5,
+            text: "Something false has to be written here so write it in three lines. Strictly three lines, not anymore and not any less."
         }
     ];
 
@@ -83,9 +90,15 @@ const Testimonials = () => {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
-                <div className="mb-12">
-                    <button className="border-2 border-blue-400 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4 hover:bg-blue-400 hover:text-white transition-colors duration-300">
-                        ✱ TESTIMONIALS
+                <div className="mb-32">
+                    <button className="
+                                border-2 border-blue-400 text-blue-400
+                                px-4 py-2 rounded-full text-sm font-semibold
+                                mb-10
+                                hover:bg-blue-400 hover:text-white
+                                transition-colors duration-300
+                    ">
+                    ✱ TESTIMONIALS
                     </button>
                     <h2 className="text-4xl md:text-5xl font-bold text-white">
                         What People say about Us
@@ -93,35 +106,48 @@ const Testimonials = () => {
                 </div>
 
                 {/* Testimonials Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-28 gap-x-10 mb-20">
                     {getVisibleTestimonials().map((testimonial, index) => (
                         <div
                             key={`${currentSlide}-${index}`}
-                            className="bg-blue-950/40 backdrop-blur-sm border border-blue-800 rounded-2xl p-6 hover:border-blue-600 transition-all duration-300"
+                            className="
+                                rounded-3xl
+                                p-10
+                                bg-[#061228]/90
+                                backdrop-blur-xl
+                                border border-[#1e2d4a]
+                                shadow-[0_0_40px_rgba(0,150,255,0.25)]
+                                hover:shadow-[0_0_55px_rgba(0,150,255,0.45)]
+                                transition-all duration-300
+                            "
                         >
-                            <div className="flex items-start gap-4 mb-4">
+                            <div className="flex flex-col items-start text-left mb-10 space-y-4">
+
                                 <img
-                                    src={testimonial.image}
-                                    alt={testimonial.name}
-                                    className="w-16 h-16 rounded-full object-cover border-2 border-blue-600"
-                                />
-                                <div>
+                                        src={testimonial.image}
+                                        alt={testimonial.name}
+                                        className="w-20 h-20 rounded-full object-cover mb-4 shadow-[0_0_12px_rgba(0,150,255,0.35)]"
+                                    />
+
                                     <h3 className="text-white font-bold text-lg">{testimonial.name}</h3>
-                                    <p className="text-gray-400 text-sm">
+
+                                    <p className="text-gray-400 text-sm mt-1 tracking-wider uppercase">
                                         {testimonial.role} <span className="font-bold text-white">{testimonial.company}</span>
                                     </p>
-                                </div>
                             </div>
+
                             <p className="text-gray-300 text-sm leading-relaxed">
                                 {testimonial.text}
                             </p>
                         </div>
+
+
                     ))}
                 </div>
 
                 {/* Navigation Dots */}
-                <div className="flex justify-center items-center gap-2">
-                    {Array.from({ length: totalSlides }).map((_, index) => (
+                <div className="flex justify-center items-center gap-3 mt-10">
+                {Array.from({ length: totalSlides }).map((_, index) => (
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
