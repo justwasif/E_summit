@@ -9,6 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "author":"justwasif,ibrahim2750mi",
+  "license": "ISC",
   "dependencies": {
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
